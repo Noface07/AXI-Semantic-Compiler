@@ -3,5 +3,9 @@ dist/
 *.tsbuildinfo
 .env
 tdspl-cli/
-fixtures/
+# Ignore proprietary fixtures but allow the synthetic test collection
+fixtures/*
+!fixtures/postman/
+fixtures/postman/*
+!fixtures/postman/synthetic_test_collection.postman_collection.json
 packages/backend-axi/src/__tests__/test-output-cli/

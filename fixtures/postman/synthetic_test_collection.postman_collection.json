@@ -1,0 +1,125 @@
+{
+  "info": {
+    "name": "TDSPL Categorized",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication & User Management",
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "item": [
+        {
+          "name": "SignIn",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/api/SignIn",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "SignIn"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetUserProfile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/api/GetUserProfile",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "GetUserProfile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Deck & Dashboard Managements",
+      "item": [
+        {
+          "name": "Delete Deck",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{URL}}/api/DeleteDeck/123",
+              "host": ["{{URL}}"],
+              "path": ["api", "DeleteDeck", "123"]
+            }
+          }
+        },
+        {
+          "name": "Add Deck",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"field1\": \"a\", \"field2\": \"b\", \"field3\": \"c\", \"field4\": \"d\", \"field5\": \"e\", \"field6\": \"f\", \"field7\": \"g\"}",
+              "options": {
+                "raw": { "language": "json" }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}/api/AddDeck",
+              "host": ["{{URL}}"],
+              "path": ["api", "AddDeck"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alarms & Events",
+      "item": [
+        {
+          "name": "Active Alarms",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}/api/ActiveAlarms",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "ActiveAlarms"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
