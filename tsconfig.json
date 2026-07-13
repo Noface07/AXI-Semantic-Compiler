@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/core-ast" },
+    { "path": "./packages/core-sir" },
+    { "path": "./packages/frontend-postman" },
+    { "path": "./packages/passes" },
+    { "path": "./packages/pipeline" },
+    { "path": "./packages/backend-axi" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/backend-eval" }
+  ]
+}

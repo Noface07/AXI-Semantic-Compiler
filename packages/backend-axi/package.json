@@ -1,0 +1,19 @@
+{
+  "name": "@asc/backend-axi",
+  "version": "0.1.0",
+  "description": "AXI backend for the API Semantic Compiler — generates CLI tools from SIR",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@asc/core-sir": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "*"
+  }
+}

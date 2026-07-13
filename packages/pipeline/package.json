@@ -1,0 +1,22 @@
+{
+  "name": "@asc/pipeline",
+  "version": "0.1.0",
+  "description": "Pipeline orchestrator for the API Semantic Compiler — runs AST → passes → SIR",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@asc/core-ast": "*",
+    "@asc/core-sir": "*",
+    "@asc/passes": "*",
+    "@asc/frontend-postman": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "*"
+  }
+}

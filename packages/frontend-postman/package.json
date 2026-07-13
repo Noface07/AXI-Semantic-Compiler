@@ -1,0 +1,19 @@
+{
+  "name": "@asc/frontend-postman",
+  "version": "0.1.0",
+  "description": "Postman v2.1 collection → Unified AST frontend for the API Semantic Compiler",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@asc/core-ast": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "*"
+  }
+}

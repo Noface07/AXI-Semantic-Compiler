@@ -1,0 +1,19 @@
+{
+  "name": "@asc/backend-eval",
+  "version": "0.1.0",
+  "description": "Eval harness for AXI CLI testing",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@asc/core-sir": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "*"
+  }
+}

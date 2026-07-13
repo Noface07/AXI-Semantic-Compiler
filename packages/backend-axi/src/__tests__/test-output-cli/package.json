@@ -1,0 +1,19 @@
+{
+  "name": "tdspl-categorized-cli",
+  "version": "1.0.0",
+  "description": "AXI-compliant CLI for TDSPL Categorized",
+  "bin": {
+    "tdsplcategorized": "./dist/index.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

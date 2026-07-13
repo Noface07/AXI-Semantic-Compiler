@@ -1,0 +1,302 @@
+{
+  "success": false,
+  "errors": [
+    "Operation 'eventsHotReloading' (events-hot-reloading) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'aPISIMULATORSignInLocal' (api-simulator---sign-in-local) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'getUserProfile' (user-profile) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'loginOLDNOTIMPORTANT' (login-old-not-important-) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'signIn' (sign-in) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'edgentHotReloading' (edgent-hot-reloading) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'getCommonTemplateHierarchyList' (common-template-hierarchy) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'removeIEC104DataSource' (iec104-data-source) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'importOPCHierarchy' (import-opc-hierarchy) failed to execute: spawnSync cmd.exe ETIMEDOUT\n",
+    "Operation 'uploadBulkTagData' (upload-bulk-tag-data) failed to execute: spawnSync cmd.exe ETIMEDOUT\n"
+  ],
+  "testedOperations": [
+    {
+      "id": "enableDisabledAlarmConfig",
+      "cmdName": "enable-disabled-alarm-config",
+      "status": "pass"
+    },
+    {
+      "id": "eventsHotReloading",
+      "cmdName": "events-hot-reloading",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "getActiveAlarmsList",
+      "cmdName": "active-alarms",
+      "status": "pass"
+    },
+    {
+      "id": "getAlarmHistoryList",
+      "cmdName": "alarm-history",
+      "status": "pass"
+    },
+    {
+      "id": "getAlarmsConfig",
+      "cmdName": "alarms-config",
+      "status": "pass"
+    },
+    {
+      "id": "aPISIMULATORSetMockData",
+      "cmdName": "api-simulator---set-mock-data",
+      "status": "pass"
+    },
+    {
+      "id": "aPISIMULATORSignInLocal",
+      "cmdName": "api-simulator---sign-in-local",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "getUserProfile",
+      "cmdName": "user-profile",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "loginOLDNOTIMPORTANT",
+      "cmdName": "login-old-not-important-",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "signIn",
+      "cmdName": "sign-in",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "addEditDeckComponent",
+      "cmdName": "edit-deck-component",
+      "status": "pass"
+    },
+    {
+      "id": "addEditDeckInformation",
+      "cmdName": "edit-deck-information",
+      "status": "pass"
+    },
+    {
+      "id": "getDefaultDeckInformation",
+      "cmdName": "default-deck-information",
+      "status": "pass"
+    },
+    {
+      "id": "getDesignerDeckList",
+      "cmdName": "designer-deck",
+      "status": "pass"
+    },
+    {
+      "id": "getDistinctDeckTopics",
+      "cmdName": "distinct-deck-topics",
+      "status": "pass"
+    },
+    {
+      "id": "getSpecificDeckInformation",
+      "cmdName": "specific-deck-information",
+      "status": "pass"
+    },
+    {
+      "id": "removeActiveDeckTopics",
+      "cmdName": "active-deck-topics",
+      "status": "pass"
+    },
+    {
+      "id": "removeActiveDeckTopicslocal",
+      "cmdName": "active-deck-topics-local-",
+      "status": "pass"
+    },
+    {
+      "id": "removeDefaultFavDeck",
+      "cmdName": "default-fav-deck",
+      "status": "pass"
+    },
+    {
+      "id": "sendDeckHeartbeat",
+      "cmdName": "send-deck-heartbeat",
+      "status": "pass"
+    },
+    {
+      "id": "sendDeckHeartbeatlocal",
+      "cmdName": "send-deck-heartbeat-local-",
+      "status": "pass"
+    },
+    {
+      "id": "setDefaultFavDeck",
+      "cmdName": "default-fav-deck-1",
+      "status": "pass"
+    },
+    {
+      "id": "addEditDNP3DataSource",
+      "cmdName": "edit-dnp3-data-source",
+      "status": "pass"
+    },
+    {
+      "id": "getBACnetHierarchy",
+      "cmdName": "ba-cnet-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "getDNP3Hierarchy",
+      "cmdName": "dnp3-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "downloadEdgentConfig",
+      "cmdName": "download-edgent-config",
+      "status": "pass"
+    },
+    {
+      "id": "edgentHotReloading",
+      "cmdName": "edgent-hot-reloading",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "getCommonTemplateHierarchyList",
+      "cmdName": "common-template-hierarchy",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "getMQTTEdgeAuthentication",
+      "cmdName": "mqtt-edge-authentication",
+      "status": "pass"
+    },
+    {
+      "id": "addEditDataSource",
+      "cmdName": "edit-data-source",
+      "status": "pass"
+    },
+    {
+      "id": "getIec104Hierarchy",
+      "cmdName": "iec104-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "removeIEC104DataSource",
+      "cmdName": "iec104-data-source",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "apiGetMBHierarchyList",
+      "cmdName": "api-get-mb-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "exportModdconnHierarchy",
+      "cmdName": "export-moddconn-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "getMBSpecificNodeList",
+      "cmdName": "mb-specific-node",
+      "status": "pass"
+    },
+    {
+      "id": "getModbusHierarchy",
+      "cmdName": "modbus-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "addEditNode",
+      "cmdName": "edit-node",
+      "status": "pass"
+    },
+    {
+      "id": "downloadNodeConfig",
+      "cmdName": "download-node-config",
+      "status": "pass"
+    },
+    {
+      "id": "addEditOPCUaDataSource",
+      "cmdName": "edit-opc-ua-data-source",
+      "status": "pass"
+    },
+    {
+      "id": "getNodeMappedTagData",
+      "cmdName": "node-mapped-tag-data",
+      "status": "pass"
+    },
+    {
+      "id": "getOPCHierarchyList",
+      "cmdName": "opc-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "getOpcUaHierarchy",
+      "cmdName": "opc-ua-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "getOPCUAHierarchyList",
+      "cmdName": "opcua-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "getOpcUaServersWithOrgMappings",
+      "cmdName": "opc-ua-servers-with-org-mappings",
+      "status": "pass"
+    },
+    {
+      "id": "getAllOrganizationList",
+      "cmdName": "all-organization",
+      "status": "pass"
+    },
+    {
+      "id": "getCatelogueCategory",
+      "cmdName": "catelogue-category",
+      "status": "pass"
+    },
+    {
+      "id": "getS7Hierarchy",
+      "cmdName": "s7-hierarchy",
+      "status": "pass"
+    },
+    {
+      "id": "getAggregationTopics",
+      "cmdName": "aggregation-topics",
+      "status": "pass"
+    },
+    {
+      "id": "getHistorianData",
+      "cmdName": "historian-data",
+      "status": "pass"
+    },
+    {
+      "id": "getInfoTagsList",
+      "cmdName": "info-tags",
+      "status": "pass"
+    },
+    {
+      "id": "getInfoTagsListLocal",
+      "cmdName": "info-tags-list-local-",
+      "status": "pass"
+    },
+    {
+      "id": "getTimeSeriesData",
+      "cmdName": "time-series-data",
+      "status": "pass"
+    },
+    {
+      "id": "getTopicList",
+      "cmdName": "topic",
+      "status": "pass"
+    },
+    {
+      "id": "importOPCHierarchy",
+      "cmdName": "import-opc-hierarchy",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    },
+    {
+      "id": "uploadBulkTagData",
+      "cmdName": "upload-bulk-tag-data",
+      "status": "fail",
+      "error": "spawnSync cmd.exe ETIMEDOUT"
+    }
+  ]
+}

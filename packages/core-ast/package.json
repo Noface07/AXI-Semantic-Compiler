@@ -1,0 +1,16 @@
+{
+  "name": "@asc/core-ast",
+  "version": "0.1.0",
+  "description": "Unified AST types for the API Semantic Compiler — format-agnostic, lossless intermediate between source specs and SIR",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "*"
+  }
+}

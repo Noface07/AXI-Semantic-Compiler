@@ -1,0 +1,4886 @@
+{
+  "apiName": "TDSPL Categorized",
+  "diagnostics": [
+    {
+      "level": "info",
+      "message": "Body mode 'raw' has no schema extraction support — stored as raw",
+      "subject": "GetCommonTemplateHierarchyList"
+    },
+    {
+      "fieldPath": "resources[name=alarms-&-events].operations[id=enableDisabledAlarmConfig].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'enableDisabledAlarmConfig' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "alarms-&-events.enableDisabledAlarmConfig"
+    },
+    {
+      "fieldPath": "resources[name=alarms-&-events].operations[id=eventsHotReloading].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'eventsHotReloading' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "alarms-&-events.eventsHotReloading"
+    },
+    {
+      "fieldPath": "resources[name=authentication-&-user-managements].operations[id=aPISIMULATORSetMockData].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'aPISIMULATORSetMockData' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "authentication-&-user-managements.aPISIMULATORSetMockData"
+    },
+    {
+      "fieldPath": "resources[name=authentication-&-user-managements].operations[id=aPISIMULATORSignInLocal].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'aPISIMULATORSignInLocal' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "authentication-&-user-managements.aPISIMULATORSignInLocal"
+    },
+    {
+      "fieldPath": "resources[name=authentication-&-user-managements].operations[id=loginOLDNOTIMPORTANT].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'loginOLDNOTIMPORTANT' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "authentication-&-user-managements.loginOLDNOTIMPORTANT"
+    },
+    {
+      "fieldPath": "resources[name=authentication-&-user-managements].operations[id=signIn].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'signIn' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "authentication-&-user-managements.signIn"
+    },
+    {
+      "fieldPath": "resources[name=deck-&-dashboard-managements].operations[id=sendDeckHeartbeat].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'sendDeckHeartbeat' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "deck-&-dashboard-managements.sendDeckHeartbeat"
+    },
+    {
+      "fieldPath": "resources[name=deck-&-dashboard-managements].operations[id=sendDeckHeartbeatlocal].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'sendDeckHeartbeatlocal' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "deck-&-dashboard-managements.sendDeckHeartbeatlocal"
+    },
+    {
+      "fieldPath": "resources[name=edge,-mqtt-&-system-templates].operations[id=downloadEdgentConfig].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'downloadEdgentConfig' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "edge,-mqtt-&-system-templates.downloadEdgentConfig"
+    },
+    {
+      "fieldPath": "resources[name=edge,-mqtt-&-system-templates].operations[id=edgentHotReloading].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'edgentHotReloading' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "edge,-mqtt-&-system-templates.edgentHotReloading"
+    },
+    {
+      "fieldPath": "resources[name=modbus].operations[id=exportModdconnHierarchy].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'exportModdconnHierarchy' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "modbus.exportModdconnHierarchy"
+    },
+    {
+      "fieldPath": "resources[name=node-configurations].operations[id=downloadNodeConfig].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'downloadNodeConfig' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "node-configurations.downloadNodeConfig"
+    },
+    {
+      "fieldPath": "resources[name=tags,-topics-&-data-points].operations[id=importOPCHierarchy].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'importOPCHierarchy' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "tags,-topics-&-data-points.importOPCHierarchy"
+    },
+    {
+      "fieldPath": "resources[name=tags,-topics-&-data-points].operations[id=uploadBulkTagData].kind",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "level": "review",
+      "message": "Operation 'uploadBulkTagData' could not be classified beyond 'action' — consider adding an x-asc-kind vendor extension",
+      "subject": "tags,-topics-&-data-points.uploadBulkTagData"
+    }
+  ],
+  "resources": [
+    {
+      "description": "Operations on Alarms & Events",
+      "displayName": "Alarms & Events",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "alarms-&-events",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "enable": {
+                    "kind": "primitive",
+                    "type": "boolean"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "enable"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/EnableDisabledAlarmConfig",
+            "rawPath": "/api/EnableDisabledAlarmConfig"
+          },
+          "id": "enableDisabledAlarmConfig",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "enable-disabled-alarm-config",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "Action",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "Action",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "Id",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "Id",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "OrgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "OrgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "Reference",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "Reference",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "ShortCode",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "ShortCode",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "medium",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/EventsHotReloading",
+            "rawPath": "/api/EventsHotReloading"
+          },
+          "id": "eventsHotReloading",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "events-hot-reloading",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "object",
+                    "properties": {
+                      "active": {
+                        "kind": "primitive",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "active"
+                    ]
+                  }
+                },
+                "required": [
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetActiveAlarmsList",
+            "rawPath": "/api/GetActiveAlarmsList"
+          },
+          "id": "getActiveAlarmsList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "active-alarms",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "object",
+                    "properties": {
+                      "active": {
+                        "kind": "primitive",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "active"
+                    ]
+                  }
+                },
+                "required": [
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetActiveAlarmsList",
+            "rawPath": "/api/GetActiveAlarmsList"
+          },
+          "id": "getAlarmHistoryList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "alarm-history",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetAlarmsConfigDetailList",
+            "rawPath": "/api/GetAlarmsConfigDetailList"
+          },
+          "id": "getAlarmsConfig",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "alarms-config",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Authentication & User Managements",
+      "displayName": "Authentication & User Managements",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "authentication-&-user-managements",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "password": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "response1": {
+                    "kind": "object",
+                    "properties": {
+                      "access_token": {
+                        "kind": "primitive",
+                        "type": "string"
+                      },
+                      "expires_in": {
+                        "kind": "primitive",
+                        "type": "integer"
+                      },
+                      "isError": {
+                        "kind": "primitive",
+                        "type": "boolean"
+                      },
+                      "refereshTokenExpiresIn": {
+                        "kind": "primitive",
+                        "type": "integer"
+                      },
+                      "refresh_token": {
+                        "kind": "primitive",
+                        "type": "string"
+                      },
+                      "successDescription": {
+                        "kind": "primitive",
+                        "type": "string"
+                      },
+                      "token_type": {
+                        "kind": "primitive",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "access_token",
+                      "expires_in",
+                      "token_type",
+                      "refresh_token",
+                      "isError",
+                      "refereshTokenExpiresIn",
+                      "successDescription"
+                    ]
+                  },
+                  "username": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username",
+                  "password",
+                  "response1"
+                ]
+              },
+              "canonicalName": "login",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "login",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/SetMockData",
+            "rawPath": "/api/SetMockData"
+          },
+          "id": "aPISIMULATORSetMockData",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "api simulator - set-mock-data",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "client_id",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "client_id",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "grant_type",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "grant_type",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "password",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "password",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "username",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "username",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [],
+          "complexity": "medium",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "urlencoded",
+            "method": "POST",
+            "path": "/api/SignIn",
+            "rawPath": "/api/SignIn"
+          },
+          "id": "aPISIMULATORSignInLocal",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "api simulator - sign-in local",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "simple",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetUserProfile",
+            "rawPath": "/api/GetUserProfile"
+          },
+          "id": "getUserProfile",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "user-profile",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "password",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "password",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "Username",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "Username",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [],
+          "complexity": "simple",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/Login",
+            "rawPath": "/api/Login"
+          },
+          "id": "loginOLDNOTIMPORTANT",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "login(old not important)",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "client_id",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "client_id",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "grant_type",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "grant_type",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "password",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "password",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "username",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "username",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [],
+          "complexity": "medium",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "urlencoded",
+            "method": "POST",
+            "path": "/api/SignIn",
+            "rawPath": "/api/SignIn"
+          },
+          "id": "signIn",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "sign-in",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Deck & Dashboard Managements",
+      "displayName": "Deck & Dashboard Managements",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "deck-&-dashboard-managements",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetIec104Hierarchy",
+            "rawPath": "/api/GetIec104Hierarchy"
+          },
+          "id": "addEditDeckComponent",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "create",
+          "name": "edit-deck-component",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetIec104Hierarchy",
+            "rawPath": "/api/GetIec104Hierarchy"
+          },
+          "id": "addEditDeckInformation",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "create",
+          "name": "edit-deck-information",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "clientId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "mode": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "mode",
+                  "clientId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "entityId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "entityId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetDefaultDeck",
+            "rawPath": "/api/GetDefaultDeck"
+          },
+          "id": "getDefaultDeckInformation",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "default-deck-information",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "shortCode": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "shortCode"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/DownloadNodeConfig",
+            "rawPath": "/api/DownloadNodeConfig"
+          },
+          "id": "getDesignerDeckList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "designer-deck",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "filterRowsCount": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "orderBy": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "orderType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "searchText": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "totalRows": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pageSize",
+                  "totalRows",
+                  "currentPage",
+                  "searchText",
+                  "filterRowsCount",
+                  "orderType",
+                  "orderBy",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetInfoTagsList",
+            "rawPath": "/api/GetInfoTagsList"
+          },
+          "id": "getDistinctDeckTopics",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "distinct-deck-topics",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "id": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "mode": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "mode"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "entityId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "entityId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetSpecificDeckInformation",
+            "rawPath": "/api/GetSpecificDeckInformation"
+          },
+          "id": "getSpecificDeckInformation",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "specific-deck-information",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "deckId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "deckId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "destructive",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/RemoveActiveDeckTopics",
+            "rawPath": "/api/RemoveActiveDeckTopics"
+          },
+          "id": "removeActiveDeckTopics",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "delete",
+          "name": "active-deck-topics",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "filterRowsCount": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "orderBy": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "orderType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "searchText": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "totalRows": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pageSize",
+                  "totalRows",
+                  "currentPage",
+                  "searchText",
+                  "filterRowsCount",
+                  "orderType",
+                  "orderBy",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "destructive",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/RemoveActiveDeckTopics",
+            "rawPath": "/api/RemoveActiveDeckTopics"
+          },
+          "id": "removeActiveDeckTopicslocal",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "delete",
+          "name": "active-deck-topics(local)",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "shortCode": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "shortCode"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "destructive",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/DownloadNodeConfig",
+            "rawPath": "/api/DownloadNodeConfig"
+          },
+          "id": "removeDefaultFavDeck",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "delete",
+          "name": "default-fav-deck",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "clientId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "deckId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "deckId",
+                  "clientId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/SendDeckHeartbeat",
+            "rawPath": "/api/SendDeckHeartbeat"
+          },
+          "id": "sendDeckHeartbeat",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "send-deck-heartbeat",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "filterRowsCount": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "orderBy": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "orderType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "searchText": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "totalRows": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pageSize",
+                  "totalRows",
+                  "currentPage",
+                  "searchText",
+                  "filterRowsCount",
+                  "orderType",
+                  "orderBy",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/SendDeckHeartbeat",
+            "rawPath": "/api/SendDeckHeartbeat"
+          },
+          "id": "sendDeckHeartbeatlocal",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "send-deck-heartbeat(local)",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "shortCode": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "shortCode"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/DownloadNodeConfig",
+            "rawPath": "/api/DownloadNodeConfig"
+          },
+          "id": "setDefaultFavDeck",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "update",
+          "name": "default-fav-deck",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Dnp3 & Ba Cnets",
+      "displayName": "Dnp3 & Ba Cnets",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "dnp3-&-ba-cnets",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "name": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "parentId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "typeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "parentId",
+                  "name",
+                  "typeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/DNP3/GetSpecificDNP3Tag",
+            "rawPath": "/api/DNP3/GetSpecificDNP3Tag"
+          },
+          "id": "addEditDNP3DataSource",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "create",
+          "name": "edit-dnp3-data-source",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "typeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId",
+                  "typeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "searchText": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "searchText",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetBACnetHierarchy",
+            "rawPath": "/api/GetBACnetHierarchy"
+          },
+          "id": "getBACnetHierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "ba-cnet-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetDNP3Hierarchy",
+            "rawPath": "/api/GetDNP3Hierarchy"
+          },
+          "id": "getDNP3Hierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "dnp3-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Edge, Mqtt & System Templates",
+      "displayName": "Edge, Mqtt & System Templates",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "edge,-mqtt-&-system-templates",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "edgentType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "shortCode": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "shortCode",
+                  "edgentType"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/DownloadEdgentConfig",
+            "rawPath": "/api/DownloadEdgentConfig"
+          },
+          "id": "downloadEdgentConfig",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "download-edgent-config",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "action",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "action",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "id",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "id",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "purpose",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "purpose",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "Reference",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "Reference",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "medium",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/EdgentHotReloading",
+            "rawPath": "/api/EdgentHotReloading"
+          },
+          "id": "edgentHotReloading",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "edgent-hot-reloading",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "simple",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetCommonTemplateHierarchyList",
+            "rawPath": "/api/GetCommonTemplateHierarchyList"
+          },
+          "id": "getCommonTemplateHierarchyList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "common-template-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetMQTTEdgeAuthentication",
+            "rawPath": "/api/GetMQTTEdgeAuthentication"
+          },
+          "id": "getMQTTEdgeAuthentication",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "mqtt-edge-authentication",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on General Data Sources",
+      "displayName": "General Data Sources",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "general-data-sources",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pageSize",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetInfoTagsList",
+            "rawPath": "/api/GetInfoTagsList"
+          },
+          "id": "addEditDataSource",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "create",
+          "name": "edit-data-source",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Iec 104s",
+      "displayName": "Iec 104s",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "iec-104s",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetIec104Hierarchy",
+            "rawPath": "/api/GetIec104Hierarchy"
+          },
+          "id": "getIec104Hierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "iec104-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "action",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "action",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "id",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "id",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "purpose",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "purpose",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "Reference",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "Reference",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "medium",
+          "danger": "destructive",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/RemoveIEC104DataSource",
+            "rawPath": "/api/RemoveIEC104DataSource"
+          },
+          "id": "removeIEC104DataSource",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "delete",
+          "name": "iec104-data-source",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Modbus",
+      "displayName": "Modbus",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "modbus",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetOpcUaHierarchy",
+            "rawPath": "/api/GetOpcUaHierarchy"
+          },
+          "id": "apiGetMBHierarchyList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "api/get-mb-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "object",
+                    "properties": {
+                      "parentCode": {
+                        "kind": "primitive",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "parentCode"
+                    ]
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/ExportModdconnHierarchy",
+            "rawPath": "/api/ExportModdconnHierarchy"
+          },
+          "id": "exportModdconnHierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "export-moddconn-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/Moddconn/GetMBSpecificNodeList",
+            "rawPath": "/api/Moddconn/GetMBSpecificNodeList"
+          },
+          "id": "getMBSpecificNodeList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "mb-specific-node",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "currentPage",
+                  "pageSize"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/getModbusHierarchy",
+            "rawPath": "/api/getModbusHierarchy"
+          },
+          "id": "getModbusHierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "modbus-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Node Configurations",
+      "displayName": "Node Configurations",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "node-configurations",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "authenticationType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "ip": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "name": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "shortCode": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "ip",
+                  "name",
+                  "shortCode",
+                  "authenticationType"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/AddEditNode",
+            "rawPath": "/api/AddEditNode"
+          },
+          "id": "addEditNode",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "create",
+          "name": "edit-node",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "shortCode": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "shortCode"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/DownloadNodeConfig",
+            "rawPath": "/api/DownloadNodeConfig"
+          },
+          "id": "downloadNodeConfig",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "download-node-config",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Opc Ua / Opc Das",
+      "displayName": "Opc Ua / Opc Das",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "opc-ua-/-opc-das",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "server": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId",
+                  "server"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "mutating",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/AddEditOPCUaDataSource",
+            "rawPath": "/api/AddEditOPCUaDataSource"
+          },
+          "id": "addEditOPCUaDataSource",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "create",
+          "name": "edit-opc-ua-data-source",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "ipAddress",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "ipAddress",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "moduleId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "moduleId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "originName",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "originName",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "requestDateTime",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "requestDateTime",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "roleId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "roleId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "userId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "userId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "userType",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "userType",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetNodeMappedTagData",
+            "rawPath": "/api/GetNodeMappedTagData"
+          },
+          "id": "getNodeMappedTagData",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "node-mapped-tag-data",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "currentPage",
+                  "pageSize"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetOPCHierarchyList",
+            "rawPath": "/api/GetOPCHierarchyList"
+          },
+          "id": "getOPCHierarchyList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "opc-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetOpcUaHierarchy",
+            "rawPath": "/api/GetOpcUaHierarchy"
+          },
+          "id": "getOpcUaHierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "opc-ua-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "typeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "typeId",
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "currentPage",
+                  "pageSize",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetOPCUAHierarchyList",
+            "rawPath": "/api/GetOPCUAHierarchyList"
+          },
+          "id": "getOPCUAHierarchyList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "opcua-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetOpcUaServersWithOrgMappings",
+            "rawPath": "/api/GetOpcUaServersWithOrgMappings"
+          },
+          "id": "getOpcUaServersWithOrgMappings",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "opc-ua-servers-with-org-mappings",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Organization & Catalogues",
+      "displayName": "Organization & Catalogues",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "organization-&-catalogues",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetAllOrganizationList",
+            "rawPath": "/api/GetAllOrganizationList"
+          },
+          "id": "getAllOrganizationList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "all-organization",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "catalog": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "catalog"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetCatelogueCategory",
+            "rawPath": "/api/GetCatelogueCategory"
+          },
+          "id": "getCatelogueCategory",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "catelogue-category",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on S7s",
+      "displayName": "S7s",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "s7s",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "id": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "nodeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "typeId": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "typeId",
+                  "nodeId"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "currentPage": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "orderBy": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "orderType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "currentPage",
+                  "pageSize",
+                  "orderBy",
+                  "orderType"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetS7Hierarchy",
+            "rawPath": "/api/GetS7Hierarchy"
+          },
+          "id": "getS7Hierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "s7-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "description": "Operations on Tags, Topics & Data Points",
+      "displayName": "Tags, Topics & Data Points",
+      "inference": {
+        "confidence": 1,
+        "provenance": "heuristic"
+      },
+      "name": "tags,-topics-&-data-points",
+      "operations": [
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetAggregationTopics",
+            "rawPath": "/api/GetAggregationTopics"
+          },
+          "id": "getAggregationTopics",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "aggregation-topics",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "ComponentId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "DeckId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "EndDate": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "StartDate": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "TZEndDate": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "TZStartDate": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "aggregationPeriod": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "aggregationValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "compConfigType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "compRefType": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "isTimeZone": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "paramCollection": {
+                    "items": {
+                      "kind": "primitive",
+                      "type": "string"
+                    },
+                    "kind": "array"
+                  },
+                  "reportingPeriod": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "rptTimeZone": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "DeckId",
+                  "ComponentId",
+                  "aggregationPeriod",
+                  "aggregationValue",
+                  "reportingPeriod",
+                  "isTimeZone",
+                  "TZStartDate",
+                  "TZEndDate",
+                  "StartDate",
+                  "EndDate",
+                  "compRefType",
+                  "compConfigType",
+                  "paramCollection",
+                  "rptTimeZone"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetHistorianData",
+            "rawPath": "/api/GetHistorianData"
+          },
+          "id": "getHistorianData",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "historian-data",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetInfoTagsList",
+            "rawPath": "/api/GetInfoTagsList"
+          },
+          "id": "getInfoTagsList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "info-tags",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "group2": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "group2"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetInfoTagsList",
+            "rawPath": "/api/GetInfoTagsList"
+          },
+          "id": "getInfoTagsListLocal",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "info-tags-list(local)",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "ComponentId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "DeckId": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  },
+                  "EndDate": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "StartDate": {
+                    "kind": "primitive",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "DeckId",
+                  "ComponentId",
+                  "StartDate",
+                  "EndDate"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {},
+                "required": []
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetTimeSeriesData",
+            "rawPath": "/api/GetTimeSeriesData"
+          },
+          "id": "getTimeSeriesData",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "time-series-data",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "isLogging": {
+                    "kind": "primitive",
+                    "type": "boolean"
+                  },
+                  "isSimulationProfile": {
+                    "kind": "primitive",
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "isLogging",
+                  "isSimulationProfile"
+                ]
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "object",
+                "properties": {
+                  "customValue": {
+                    "kind": "primitive",
+                    "type": "string"
+                  },
+                  "pageSize": {
+                    "kind": "primitive",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "pageSize",
+                  "customValue"
+                ]
+              },
+              "canonicalName": "filter",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "filterModel",
+              "required": true,
+              "role": "filter",
+              "source": "body",
+              "type": "object"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "ipAddress",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "ipAddress",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "moduleId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "moduleId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "originName",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "originName",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "requestDateTime",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "requestDateTime",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "roleId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "roleId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "userId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "userId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "userType",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "userType",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "string"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "complex",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/GetTopicList",
+            "rawPath": "/api/GetTopicList"
+          },
+          "id": "getTopicList",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "list",
+          "name": "topic",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "toon",
+            "shape": "collection"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "format": "binary",
+                "kind": "primitive",
+                "type": "string"
+              },
+              "canonicalName": "file",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "file",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "file"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "medium",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "formdata",
+            "method": "POST",
+            "path": "/api/OPC/ImportOPCHierarchy",
+            "rawPath": "/api/OPC/ImportOPCHierarchy"
+          },
+          "id": "importOPCHierarchy",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "import-opc-hierarchy",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "astSchema": {
+                "items": {
+                  "kind": "object",
+                  "properties": {
+                    "orgId": {
+                      "kind": "primitive",
+                      "type": "integer"
+                    },
+                    "tagId": {
+                      "kind": "primitive",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "kind": "primitive",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "orgId",
+                    "tagId",
+                    "value"
+                  ]
+                },
+                "kind": "array"
+              },
+              "canonicalName": "data",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "data",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "array"
+            },
+            {
+              "astSchema": {
+                "kind": "primitive",
+                "type": "integer"
+              },
+              "canonicalName": "orgId",
+              "inference": {
+                "confidence": 1,
+                "provenance": "heuristic"
+              },
+              "name": "orgId",
+              "required": true,
+              "role": "none",
+              "source": "body",
+              "type": "integer"
+            }
+          ],
+          "auth": [
+            {
+              "scheme": "bearer"
+            }
+          ],
+          "complexity": "medium",
+          "danger": "safe",
+          "httpBinding": {
+            "bodyType": "json",
+            "method": "POST",
+            "path": "/api/UploadBulkTagData",
+            "rawPath": "/api/UploadBulkTagData"
+          },
+          "id": "uploadBulkTagData",
+          "inference": {
+            "confidence": 1,
+            "provenance": "heuristic"
+          },
+          "kind": "action",
+          "name": "upload-bulk-tag-data",
+          "output": {
+            "defaultFields": [],
+            "hasTotalCount": false,
+            "inference": {
+              "confidence": 1,
+              "provenance": "heuristic"
+            },
+            "renderHint": "detail",
+            "shape": "single"
+          }
+        }
+      ],
+      "relationships": []
+    }
+  ],
+  "schemaVersion": "0.1.0",
+  "sourceHash": "08b7bce4c950b13c"
+}

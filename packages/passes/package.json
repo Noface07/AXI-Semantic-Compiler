@@ -1,0 +1,20 @@
+{
+  "name": "@asc/passes",
+  "version": "0.1.0",
+  "description": "Semantic Analyzer passes for the API Semantic Compiler — pure functions (SIR, config) => SIR",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@asc/core-sir": "*",
+    "@asc/core-ast": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "*"
+  }
+}
