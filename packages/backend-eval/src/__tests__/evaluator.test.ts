@@ -17,7 +17,7 @@ const COLLECTION_PATH = path.join(
   process.cwd(),
   'fixtures',
   'postman',
-  'TDSPL Categorized.postman_collection.json',
+  'synthetic_test_collection.postman_collection.json',
 );
 const OUT_DIR = path.join(__dirname, 'test-eval-cli');
 

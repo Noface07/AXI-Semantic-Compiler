@@ -1,153 +1,90 @@
 import { Command } from 'commander';
-import { formatToon, checkTwoPhaseConfirm, handleComplexInteraction } from '../utils';
+import { formatToon, checkTwoPhaseConfirm, handleComplexInteraction, runMediumWizard, ensureEnv } from '../utils';
 
 export function registeralarmseventsCommand(program: Command) {
   const group = program.command('alarms---events').description("Operations on Alarms & Events");
 
   
-  group.command('enable-disabled-alarm-config')
-    .description("Execute enable-disabled-alarm-config")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('enableDisabledAlarmConfig');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'enableDisabledAlarmConfig', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('events-hot-reloading')
-    .description("Execute events-hot-reloading")
-    
-    .requiredOption('--Action <value>', 'Argument Action')
-    .requiredOption('--Id <value>', 'Argument Id')
-    .requiredOption('--OrgId <value>', 'Argument OrgId')
-    .requiredOption('--Reference <value>', 'Argument Reference')
-    .requiredOption('--ShortCode <value>', 'Argument ShortCode')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file && Object.keys(opts).length === 0) {
-      console.log('Interactive wizard placeholder for eventsHotReloading...');
-      // AXI real implementation would prompt here
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'eventsHotReloading', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
   group.command('active-alarms')
-    .description("Execute active-alarms")
+    .description("Execute active alarms")
     
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    .requiredOption('--orgId <value>', 'Argument orgId')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('getActiveAlarmsList');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getActiveAlarmsList', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('alarm-history')
-    .description("Execute alarm-history")
-    
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    .requiredOption('--orgId <value>', 'Argument orgId')
+    .option('--filter <value>', 'Argument filter')
     
     .option('--file <path>', 'Provide arguments via JSON/YAML file')
     .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
+    .action(async (opts) => {
 
-    if (!opts.file) {
-      return handleComplexInteraction('getAlarmHistoryList');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getAlarmHistoryList', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('alarms-config')
-    .description("Execute alarms-config")
+    await ensureEnv();
     
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    .requiredOption('--orgId <value>', 'Argument orgId')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('getAlarmsConfig');
+    if (opts.file || opts.axiFile) {
+      try {
+        const fileContent = require('fs').readFileSync(require('path').resolve(opts.file || opts.axiFile), 'utf-8');
+        const parsed = JSON.parse(fileContent);
+        Object.assign(opts, parsed);
+      } catch (err: any) {
+        console.error('Error reading input file: ' + err.message);
+        process.exit(1);
+      }
     }
 
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getAlarmsConfig', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
+    if (!opts.file && !opts.axiFile) {
+      return handleComplexInteraction('activeAlarms', {"filter":{}});
+    }
+
+    let url = "/api/ActiveAlarms";
+
+    const baseUrl = process.env.AXI_BASE_URL || 'http://localhost:3000';
+    const reqUrl = baseUrl + (url.startsWith('/') ? url : '/' + url);
+    const contentType = 'application/json';
+
+    const reqOpts: RequestInit = {
+      method: 'POST',
+      headers: {
+        'Content-Type': contentType,
+        'Accept': 'application/json'
+      }
+    };
+    const bodyPayload: any = {};
+    if (opts['filter'] !== undefined) bodyPayload['filter'] = opts['filter'];
+    reqOpts.body = JSON.stringify(bodyPayload);
+
+    try {
+      const res = await fetch(reqUrl, reqOpts);
+      const data = await res.json().catch(() => null);
       
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
+      if (!res.ok) {
+        console.error('Error:', res.status, res.statusText);
+        if (data) console.error(JSON.stringify(data, null, 2));
+        process.exit(1);
+      }
+      
+      if (opts.json) {
+        console.log(JSON.stringify(data, null, 2));
+      } else {
+        console.log(formatToon(data));
+      }
+      
+      const opNameLower = 'active alarms'.toLowerCase();
+      const opIdLower = 'activeAlarms'.toLowerCase();
+      const tokenVal = data?.token || data?.access_token || data?.accessToken;
+      if ((opNameLower.includes('sign-in') || opNameLower.includes('login') || opIdLower.includes('signin') || opIdLower.includes('login')) && tokenVal) {
+        const envPath = require('path').join(process.cwd(), '.env');
+        let envContent = '';
+        try { envContent = require('fs').readFileSync(envPath, 'utf8'); } catch(e) {}
+        if (envContent.includes('AXI_TOKEN=')) {
+          envContent = envContent.replace(/AXI_TOKEN=.*/, 'AXI_TOKEN=' + tokenVal);
+        } else {
+          envContent += '\nAXI_TOKEN=' + tokenVal + '\n';
+        }
+        require('fs').writeFileSync(envPath, envContent.trim() + '\n');
+        console.error('\n[AXI] Automatically saved new AXI_TOKEN to .env');
+      }
+
+      process.exit(0);
+    } catch (err: any) {
+      console.error("Network Error: " + err.message);
+      console.error("Attempted URL: " + reqUrl);
+      process.exit(1);
     }
 
     });

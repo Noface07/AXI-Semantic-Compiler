@@ -76,7 +76,10 @@ function formatToonArray(arr: unknown[], config: ToonConfig): string {
   
   // Render rows
   for (const row of rows) {
-    out += columns.map((col) => row[col].padEnd(widths.get(col)!)).join('  ') + '\n';
+    out += columns.map((col) => {
+      const val = row[col];
+      return (val ?? '').padEnd(widths.get(col)!);
+    }).join('  ') + '\n';
   }
 
   return out.trimEnd();

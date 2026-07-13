@@ -20,7 +20,7 @@ const COLLECTION_PATH = join(
   process.cwd(),
   'fixtures',
   'postman',
-  'TDSPL Categorized.postman_collection.json',
+  'synthetic_test_collection.postman_collection.json',
 );
 
 const rawCollection: unknown = JSON.parse(readFileSync(COLLECTION_PATH, 'utf8'));

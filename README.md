@@ -1,5 +1,7 @@
 # AXI Semantic Compiler (ASC)
 
+[![CI](https://github.com/toon-format/toon/actions/workflows/ci.yml/badge.svg)](https://github.com/toon-format/toon/actions/workflows/ci.yml)
+
 The **AXI Semantic Compiler** is a powerful compilation pipeline designed to transform raw API specifications (such as Postman Collections) into a semantic intermediate representation (SIR), and ultimately into fully-functioning, principle-adhering Command Line Interfaces (CLIs) based on the [AXI Guidelines](https://axi.md).
 
 ## 🌟 Philosophy
@@ -18,6 +20,7 @@ The project is structured as an npm workspaces monorepo with distinct decoupled 
 - `packages/core-ast`: The universal Abstract Syntax Tree for API descriptions.
 - `packages/core-sir`: The Semantic Intermediate Representation (SIR) modeling resource entities, operations, and traits.
 - `packages/frontend-postman`: Parser that ingests Postman v2.1 Collections, extracting auth, paths, and metadata into AST.
+- `packages/frontend-openapi`: *(Planned)* Parser for OpenAPI v3.x Specifications.
 - `packages/passes` & `packages/pipeline`: 7 distinct semantic analyzer passes (Resource Merging, Pagination, Collections, Boolean detection, etc.).
 - `packages/backend-axi`: The generator that converts SIR into a standalone, executable AXI CLI codebase.
 - `packages/backend-eval`: An automated test harness with a mock HTTP server to evaluate generated CLIs.

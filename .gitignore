@@ -4,3 +4,4 @@ dist/
 .env
 tdspl-cli/
 fixtures/
+packages/backend-axi/src/__tests__/test-output-cli/

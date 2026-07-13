@@ -14,6 +14,7 @@ export interface MockServer {
   getRequests: () => Array<{
     method: string;
     url: string;
+    path: string;
     headers: Record<string, string | string[] | undefined>;
     body: any;
   }>;
@@ -53,7 +54,7 @@ export async function createMockServer(sir: SIR): Promise<MockServer> {
     server.listen(0, () => {
       const address = server.address() as { port: number };
       resolve({
-        url: `http://localhost:${address.port}`,
+        url: `http://127.0.0.1:${address.port}`,
         close: () => server.close(),
         getRequests: () => requests,
       });

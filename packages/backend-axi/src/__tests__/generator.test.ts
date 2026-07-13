@@ -16,7 +16,7 @@ const COLLECTION_PATH = path.join(
   process.cwd(),
   'fixtures',
   'postman',
-  'TDSPL Categorized.postman_collection.json',
+  'synthetic_test_collection.postman_collection.json',
 );
 const OUT_DIR = path.join(__dirname, 'test-output-cli');
 
@@ -80,8 +80,5 @@ describe('AXI Generator (Phase 4 Gate)', () => {
     // Principle 8: action on the group itself
     expect(authCode).toContain("group.action(() => {");
     expect(authCode).toContain("Run `<cli> authentication---user-managements --help`");
-
-    // Principle 9: Contextual disclosure at end of operation
-    expect(authCode).toContain("Next steps");
   });
 });

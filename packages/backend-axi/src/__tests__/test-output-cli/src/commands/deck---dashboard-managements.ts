@@ -1,353 +1,196 @@
 import { Command } from 'commander';
-import { formatToon, checkTwoPhaseConfirm, handleComplexInteraction } from '../utils';
+import { formatToon, checkTwoPhaseConfirm, handleComplexInteraction, runMediumWizard, ensureEnv } from '../utils';
 
 export function registerdeckdashboardmanagementsCommand(program: Command) {
   const group = program.command('deck---dashboard-managements').description("Operations on Deck & Dashboard Managements");
 
   
-  group.command('edit-deck-component')
-    .description("Execute edit-deck-component")
+  group.command('deck')
+    .description("Execute deck")
     
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    .requiredOption('--orgId <value>', 'Argument orgId')
+    .option('--field1 <value>', 'Argument field1')
+    .option('--field2 <value>', 'Argument field2')
+    .option('--field3 <value>', 'Argument field3')
+    .option('--field4 <value>', 'Argument field4')
+    .option('--field5 <value>', 'Argument field5')
+    .option('--field6 <value>', 'Argument field6')
+    .option('--field7 <value>', 'Argument field7')
     
     .option('--file <path>', 'Provide arguments via JSON/YAML file')
     .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
+    .action(async (opts) => {
 
-    if (!opts.file) {
-      return handleComplexInteraction('addEditDeckComponent');
+    await ensureEnv();
+    
+    if (opts.file || opts.axiFile) {
+      try {
+        const fileContent = require('fs').readFileSync(require('path').resolve(opts.file || opts.axiFile), 'utf-8');
+        const parsed = JSON.parse(fileContent);
+        Object.assign(opts, parsed);
+      } catch (err: any) {
+        console.error('Error reading input file: ' + err.message);
+        process.exit(1);
+      }
     }
 
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'addEditDeckComponent', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
+    if (!opts.file && !opts.axiFile) {
+      const missingArgs = ["field1","field2","field3","field4","field5","field6","field7"].filter(name => opts[name] === undefined);
+      if (missingArgs.length > 0) {
+        const wizardResult = await runMediumWizard('addDeck', missingArgs, {"field1":"<string>","field2":"<string>","field3":"<string>","field4":"<string>","field5":"<string>","field6":"<string>","field7":"<string>"});
+        if (wizardResult === 'generate_file') {
+          return handleComplexInteraction('addDeck', {"field1":"<string>","field2":"<string>","field3":"<string>","field4":"<string>","field5":"<string>","field6":"<string>","field7":"<string>"});
+        } else {
+          Object.assign(opts, wizardResult);
+        }
+      }
+    }
+
+    let url = "/api/AddDeck";
+
+    const baseUrl = process.env.AXI_BASE_URL || 'http://localhost:3000';
+    const reqUrl = baseUrl + (url.startsWith('/') ? url : '/' + url);
+    const contentType = 'application/json';
+
+    const reqOpts: RequestInit = {
+      method: 'POST',
+      headers: {
+        'Content-Type': contentType,
+        'Accept': 'application/json'
+      }
+    };
+    const bodyPayload: any = {};
+    if (opts['field1'] !== undefined) bodyPayload['field1'] = opts['field1'];
+    if (opts['field2'] !== undefined) bodyPayload['field2'] = opts['field2'];
+    if (opts['field3'] !== undefined) bodyPayload['field3'] = opts['field3'];
+    if (opts['field4'] !== undefined) bodyPayload['field4'] = opts['field4'];
+    if (opts['field5'] !== undefined) bodyPayload['field5'] = opts['field5'];
+    if (opts['field6'] !== undefined) bodyPayload['field6'] = opts['field6'];
+    if (opts['field7'] !== undefined) bodyPayload['field7'] = opts['field7'];
+    reqOpts.body = JSON.stringify(bodyPayload);
+
+    try {
+      const res = await fetch(reqUrl, reqOpts);
+      const data = await res.json().catch(() => null);
       
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
+      if (!res.ok) {
+        console.error('Error:', res.status, res.statusText);
+        if (data) console.error(JSON.stringify(data, null, 2));
+        process.exit(1);
+      }
+      
+      if (opts.json) {
+        console.log(JSON.stringify(data, null, 2));
+      } else {
+        console.log(formatToon(data));
+      }
+      
+      const opNameLower = 'deck'.toLowerCase();
+      const opIdLower = 'addDeck'.toLowerCase();
+      const tokenVal = data?.token || data?.access_token || data?.accessToken;
+      if ((opNameLower.includes('sign-in') || opNameLower.includes('login') || opIdLower.includes('signin') || opIdLower.includes('login')) && tokenVal) {
+        const envPath = require('path').join(process.cwd(), '.env');
+        let envContent = '';
+        try { envContent = require('fs').readFileSync(envPath, 'utf8'); } catch(e) {}
+        if (envContent.includes('AXI_TOKEN=')) {
+          envContent = envContent.replace(/AXI_TOKEN=.*/, 'AXI_TOKEN=' + tokenVal);
+        } else {
+          envContent += '\nAXI_TOKEN=' + tokenVal + '\n';
+        }
+        require('fs').writeFileSync(envPath, envContent.trim() + '\n');
+        console.error('\n[AXI] Automatically saved new AXI_TOKEN to .env');
+      }
+
+      process.exit(0);
+    } catch (err: any) {
+      console.error("Network Error: " + err.message);
+      console.error("Attempted URL: " + reqUrl);
+      process.exit(1);
     }
 
     });
 
   
-  group.command('edit-deck-information')
-    .description("Execute edit-deck-information")
+  group.command('deck-1')
+    .description("Execute deck")
     
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    .requiredOption('--orgId <value>', 'Argument orgId')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('addEditDeckInformation');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'addEditDeckInformation', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('default-deck-information')
-    .description("Execute default-deck-information")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--entityId <value>', 'Argument entityId')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('getDefaultDeckInformation');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getDefaultDeckInformation', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('designer-deck')
-    .description("Execute designer-deck")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('getDesignerDeckList');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getDesignerDeckList', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('distinct-deck-topics')
-    .description("Execute distinct-deck-topics")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('getDistinctDeckTopics');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getDistinctDeckTopics', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('specific-deck-information')
-    .description("Execute specific-deck-information")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--entityId <value>', 'Argument entityId')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('getSpecificDeckInformation');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'getSpecificDeckInformation', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('active-deck-topics')
-    .description("Execute active-deck-topics")
-    
-    .requiredOption('--data <value>', 'Argument data')
     .option('--force', 'Bypass two-phase confirmation')
     .option('--file <path>', 'Provide arguments via JSON/YAML file')
     .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-    checkTwoPhaseConfirm('removeActiveDeckTopics', !!opts.force);
+    .action(async (opts) => {
 
-    if (!opts.file) {
-      return handleComplexInteraction('removeActiveDeckTopics');
+    await ensureEnv();
+    
+    if (opts.file || opts.axiFile) {
+      try {
+        const fileContent = require('fs').readFileSync(require('path').resolve(opts.file || opts.axiFile), 'utf-8');
+        const parsed = JSON.parse(fileContent);
+        Object.assign(opts, parsed);
+      } catch (err: any) {
+        console.error('Error reading input file: ' + err.message);
+        process.exit(1);
+      }
+    }
+    checkTwoPhaseConfirm('deleteDeck', !!opts.force);
+
+    if (!opts.file && !opts.axiFile) {
+      const missingArgs = [].filter(name => opts[name] === undefined);
+      if (missingArgs.length > 0) {
+        console.error('error: required option(s) missing: ' + missingArgs.map(a => '--' + a).join(', '));
+        process.exit(1);
+      }
     }
 
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'removeActiveDeckTopics', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
+    let url = "/api/DeleteDeck/123";
+
+    const baseUrl = process.env.AXI_BASE_URL || 'http://localhost:3000';
+    const reqUrl = baseUrl + (url.startsWith('/') ? url : '/' + url);
+    const contentType = 'application/json';
+
+    const reqOpts: RequestInit = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': contentType,
+        'Accept': 'application/json'
+      }
+    };
+
+    try {
+      const res = await fetch(reqUrl, reqOpts);
+      const data = await res.json().catch(() => null);
       
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('active-deck-topics(local)')
-    .description("Execute active-deck-topics(local)")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    .option('--force', 'Bypass two-phase confirmation')
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-    checkTwoPhaseConfirm('removeActiveDeckTopicslocal', !!opts.force);
-
-    if (!opts.file) {
-      return handleComplexInteraction('removeActiveDeckTopicslocal');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'removeActiveDeckTopicslocal', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
+      if (!res.ok) {
+        console.error('Error:', res.status, res.statusText);
+        if (data) console.error(JSON.stringify(data, null, 2));
+        process.exit(1);
+      }
       
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('default-fav-deck')
-    .description("Execute default-fav-deck")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    .option('--force', 'Bypass two-phase confirmation')
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-    checkTwoPhaseConfirm('removeDefaultFavDeck', !!opts.force);
-
-    if (!opts.file) {
-      return handleComplexInteraction('removeDefaultFavDeck');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'removeDefaultFavDeck', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
+      if (opts.json) {
+        console.log(JSON.stringify(data, null, 2));
+      } else {
+        console.log(formatToon(data));
+      }
       
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
+      const opNameLower = 'deck'.toLowerCase();
+      const opIdLower = 'deleteDeck'.toLowerCase();
+      const tokenVal = data?.token || data?.access_token || data?.accessToken;
+      if ((opNameLower.includes('sign-in') || opNameLower.includes('login') || opIdLower.includes('signin') || opIdLower.includes('login')) && tokenVal) {
+        const envPath = require('path').join(process.cwd(), '.env');
+        let envContent = '';
+        try { envContent = require('fs').readFileSync(envPath, 'utf8'); } catch(e) {}
+        if (envContent.includes('AXI_TOKEN=')) {
+          envContent = envContent.replace(/AXI_TOKEN=.*/, 'AXI_TOKEN=' + tokenVal);
+        } else {
+          envContent += '\nAXI_TOKEN=' + tokenVal + '\n';
+        }
+        require('fs').writeFileSync(envPath, envContent.trim() + '\n');
+        console.error('\n[AXI] Automatically saved new AXI_TOKEN to .env');
+      }
 
-    });
-
-  
-  group.command('send-deck-heartbeat')
-    .description("Execute send-deck-heartbeat")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('sendDeckHeartbeat');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'sendDeckHeartbeat', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('send-deck-heartbeat(local)')
-    .description("Execute send-deck-heartbeat(local)")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    .requiredOption('--filterModel <value>', 'Argument filterModel')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('sendDeckHeartbeatlocal');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'sendDeckHeartbeatlocal', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
-    }
-
-    });
-
-  
-  group.command('default-fav-deck')
-    .description("Execute default-fav-deck")
-    
-    .requiredOption('--data <value>', 'Argument data')
-    
-    .option('--file <path>', 'Provide arguments via JSON/YAML file')
-    .option('--json', 'Output raw JSON instead of TOON')
-    .action((opts) => {
-
-    if (!opts.file) {
-      return handleComplexInteraction('setDefaultFavDeck');
-    }
-
-    // Placeholder for actual HTTP request execution
-    const mockResult = { status: 'success', op: 'setDefaultFavDeck', args: opts };
-    if (opts.json) {
-      console.log(JSON.stringify(mockResult, null, 2));
-    } else {
-      console.log(formatToon(mockResult));
-      
-      // Principle 9: Contextual disclosure (help block)
-      console.log('\n--- Next steps ---');
-      console.log('Run "<cli> ..." to view related operations.');
+      process.exit(0);
+    } catch (err: any) {
+      console.error("Network Error: " + err.message);
+      console.error("Attempted URL: " + reqUrl);
+      process.exit(1);
     }
 
     });
